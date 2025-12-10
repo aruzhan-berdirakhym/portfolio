@@ -1,113 +1,180 @@
+/* General */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-    color: #03396c;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  color: #03396c;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
-    background-color: #0077b6;
-    padding: 10px 20px;
+  background-color: #0077b6;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    display: inline-block;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .nav-links {
-    list-style: none;
-    display: inline-block;
-    float: right;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-    display: inline-block;
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  font-weight: 600;
 }
 
-.hero, .course, .project {
-    padding: 60px 20px;
-    text-align: center;
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #b3e5fc;
 }
 
-.profile-img, .course-img, .project-img {
-    width: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
 }
 
-.contacts a {
-    color: #0077b6;
-    text-decoration: none;
-    font-weight: bold;
+.hero-img {
+  width: 250px;
+  border-radius: 50%;
+  margin-right: 40px;
 }
 
-.contacts a:hover {
-    text-decoration: underline;
+.hero-text {
+  max-width: 600px;
 }
 
-.github {
-    margin-top: 30px;
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
-.github h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.github p {
-    margin-bottom: 15px;
+.buttons .btn {
+  background-color: #0096c7;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
-.button {
-    display: inline-block;
-    background-color: #0096c7;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+.buttons .btn-secondary {
+  background-color: #0077b6;
 }
 
-.button:hover {
-    background-color: #0077b6;
+.buttons .btn:hover {
+  opacity: 0.9;
+}
+
+/* Projects Section */
+.projects-preview {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.projects-preview h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Course & Project Pages */
+.course-page, .project-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card, .project-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #b3e5fc;
+  padding: 20px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.course-card img, .project-card img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.course-text, .project-text {
+  max-width: 600px;
 }
 
 footer {
-    background-color: #0077b6;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background-color: #0077b6;
+  color: white;
+  margin-top: 40px;
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        float: none;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .profile-img, .course-img, .project-img {
-        width: 150px;
-    }
+@media (max-width: 768px) {
+  .hero-content, .course-card, .project-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-img, .course-card img, .project-card img {
+    width: 200px;
+    margin: 0 0 20px 0;
+  }
 }
